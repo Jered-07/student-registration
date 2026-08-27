@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registro de estudiantes</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Registro de estudiantes</h1>
+        <a href="index.html">Ver Registros</a>
+      </header>
+
+      <form id="studentForm" method="post">
+        <fieldset>
+          <legend>Informacion personal</legend>
+
+          <label for="id">Identificacion</label>
+          <input type="text" id="id" name="id" required placeholder="1-1234-5678" />
+
+          <label for="name">Nombre completo</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Correo electronico</label>
+          <input type="email" id="email" name="email" required />
+        </fieldset>
+
+        <fieldset>
+          <legend>Informacion academica</legend>
+
+          <label for="program">Carrera</label>
+          <select name="program" id="program" required>
+            <option value="">Seleccione una carrera</option>
+            <option value="Informatica Empresarial">Informatica Empresarial</option>
+            <option value="Administracion">Administracion</option>
+            <option value="Trabajo-Social">Trabajo Social</option>
+            <option value="Turismo">Turismo</option>
+          </select>
+
+          <label for="age">Edad</label>
+          <input
+            type="number"
+            id="age"
+            name="age"
+            required
+            min="15"
+            max="100"
+            step="1"
+            inputmode="numeric"
+          />
+        </fieldset>
+
+        <button type="submit">Guardar estudiante</button>
+      </form>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>

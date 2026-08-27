@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Estudiantes registrados</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Estudiantes registrados</h1>
+        <a href="student-form.html">Nuevo estudiante</a>
+      </header>
+
+      <div>
+        <label for="searchInput">Buscar por nombre</label>
+        <input
+          type="search"
+          id="searchInput"
+          name="searchInput"
+          placeholder="Escriba un nombre"
+        />
+        <p>Total de estudiantes: <span id="studentCount">0</span></p>
+      </div>
+
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>Identificacion</th>
+            <th>Nombre</th>
+            <th>Correo electronico</th>
+            <th>Carrera</th>
+            <th>Edad</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="studentList"></tbody>
+      </table>
+    </main>
+
+    <script src="app.js"></script>
+    <script>
+      displayStudents(getStudents());
+      deleteStudent();
+      searchStudents();
+    </script>
+  </body>
+</html>
